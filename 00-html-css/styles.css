@@ -64,9 +64,10 @@ header {
   gap: 2rem;
 
   h2 {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin: 0;
   }
 }
 
@@ -282,5 +283,109 @@ footer {
   small {
     color: var(--text-muted);
     font-size: 0.875rem;
+  }
+}
+
+
+/* Página de búsqueda */
+
+/* Layout específico para la página de búsqueda: poner el nav a la izquierda junto al h1 */
+.page-busqueda header {
+  /* mantener alineación vertical pero sin distribuir espacio entre elementos */
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.page-busqueda header nav {
+  order: 0; /* aseguramos que el nav esté junto al h1 */
+  display: flex;
+  gap: 0.75rem;
+}
+
+.page-busqueda header .user_actions {
+  margin-left: auto; /* empuja las acciones a la derecha */
+}
+
+.user_actions {
+display: flex;
+align-items: center;
+}
+
+
+.user_actions > a:nth-child(2) {
+  background: none;
+}
+
+.perfil_img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.page-busqueda form > div:nth-child(2) {
+  background: none;
+  padding-left: 0;
+
+  select {
+    background: var(--input-bg);
+    border: none;
+    color: var(--text-primary);
+    height: 100%;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.page-busqueda main > section:nth-child(2) {
+
+  header {
+    align-items: start;
+    padding-left: 0;
+  }
+  article {
+    border: .01rem solid var(--border);
+    border-radius: 0;
+    margin-bottom: 0;
+    background: none;
+    display: flex;
+    gap: 5rem;
+  }
+  article:nth-child(2) {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  article:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+  }
+  div {
+    /* max-width: 80% */
+  }
+  button {
+    width: 5rem;
+    min-width: 5rem;
+    height: 2.5rem;
+    background: var(--primary-light);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: 700;
+  }
+}
+
+.page-busqueda footer {
+  display: flex;
+  justify-content: center;
+
+  a {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  a:focus {
+    background: var(--primary-light);
   }
 }
