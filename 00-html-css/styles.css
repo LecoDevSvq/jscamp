@@ -347,6 +347,7 @@ align-items: center;
   header {
     align-items: start;
     padding-left: 0;
+    border-bottom: none
   }
   article {
     border: .01rem solid var(--border);
@@ -362,9 +363,7 @@ align-items: center;
   article:last-child {
     border-radius: 0 0 0.5rem 0.5rem;
   }
-  div {
-    /* max-width: 80% */
-  }
+
   button {
     width: 5rem;
     min-width: 5rem;
@@ -380,11 +379,13 @@ align-items: center;
 .page-busqueda footer {
   display: flex;
   justify-content: center;
+  border-top: none;
 
   a {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
   }
+
   a:focus {
     background: var(--primary-light);
   }
