@@ -327,6 +327,7 @@ align-items: center;
 .page-busqueda form > div:nth-child(2) {
   background: none;
   padding-left: 0;
+  box-shadow: none;
 
   select {
     background: var(--input-bg);
